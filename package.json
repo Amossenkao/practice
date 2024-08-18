@@ -1,0 +1,20 @@
+{
+	"dependencies": {
+		"express": "^4.19.2",
+		"mongodb": "^6.8.0"
+	},
+	"devDependencies": {
+		"dotenv": "^16.4.5"
+	},
+	"name": "practice",
+	"version": "1.0.0",
+	"main": "backend/index.js",
+	"scripts": {
+		"start": "node backend/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": ""
+}
